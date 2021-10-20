@@ -1,0 +1,124 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app{
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: "Merienda", sans-serif;
+}
+
+.time-select,
+.sound-picker, 
+.player-container{
+    height: 70%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.player-container svg {
+    position: absolute;
+    width: 45vh;
+    pointer-events: none;
+    height: 150%;
+    top: 50%;
+    left: 49.5%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    pointer-events: none;
+}
+
+.time-display {
+    position: absolute;
+    bottom: 10%;
+    color: white;
+    font-size: 50px;
+        font-family: "Josefin Sans", sans-serif;
+}
+
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -20;
+    height: 100%;
+    width: 177.77777778vh; /* 100 * 16 / 9 */
+    min-width: 100%;
+    min-height: 56.25vw; /* 100 * 9 / 16 */
+    }
+
+.time-select button,
+.sound-picker button{
+    color: #000000;
+    width: 150px;
+    height: 50px;
+    background: none;
+    cursor: pointer;
+    border: solid rgb(255 255 255);
+    background: rgb(255 255 255);
+    border-radius: 20px;
+    font-size: 22px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.time-select button:hover {
+
+    box-shadow: 0px 0px 35px #ff00b3;
+}
+
+.sound-picker button{
+    border: none;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+
+}
+
+.sound-picker button:nth-child(1){
+    background: #4972a1;
+}
+
+.sound-picker button:nth-child(2){
+    background: rgb(236, 99, 99);
+}
+
+.sound-picker button img{
+    height: 8vh;
+}
+.play{
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 720px) {
+
+    .sound-picker button{
+        color: white;
+        width: 70px;
+        height: 70px;
+        background: none;
+        cursor: pointer;
+        border: solid white 1px;
+        font-size: 15px;
+    }
+    .time-select button{
+        width: 6rem;
+        height: 2rem;
+    }
+    .player-container svg {
+        height: 25%;
+        top: 50%;
+        left: 50%;
+    }
+    .time-select button:nth-child(2){
+        display: none;
+     }
+
+  }
